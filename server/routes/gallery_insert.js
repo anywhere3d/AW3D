@@ -42,24 +42,3 @@ module.exports = function(app) {
     });
 
 };
-
-/*
-function galleryInsert(req, res){
-    Gallery.insert(req.body.data, {safe: true}, function(err, obj){
-        debugMode && console.log("/gallery/insert result:", obj);
-
-        if (err){
-
-            res.status(400).json({error: err});
-            debugMode && console.log("/gallery/insert: failure.");
-
-        } else {
-
-            res.status(200).json( {success: obj.result} );
-            debugMode && console.log("/gallery/insert: success.");
-            
-        }
-
-    });
-}
-*/
