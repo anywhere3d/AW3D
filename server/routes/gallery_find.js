@@ -59,16 +59,13 @@ module.exports = function(app) {
 
     });
 
-    app.post("/gallery/find/options/selectors", function(req, res){
+    app.post("/gallery/find/selectors/options", function(req, res){
 
         debugMode && console.log("post /gallery/find/options/selectors req.body.options:", req.body );
         debugMode && console.log("post /gallery/find/options/selectors req.params:", req.params);
 
-        var options = req.body.options;
-        debugMode && console.log("options:", options);
-
-        var selectors = req.body.selectors;
-        debugMode && console.log("selectors:", selectors);
+        var options = JSON.parse( req.body.options );       debugMode && console.log("options:", options);
+        var selectors = JSON.parse( req.body.selectors );   debugMode && console.log("selectors:", selectors);
 
         new Promise( function(resolve, reject){
 
@@ -110,8 +107,3 @@ module.exports = function(app) {
     });
 
 };
-
-
-
-
-
