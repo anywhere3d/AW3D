@@ -1,3 +1,5 @@
+//  worker.js (v0.4.0-sc)
+
 var path = require("path");
 var morgan = require("morgan");
 var SCWorker = require("socketcluster/scworker");
@@ -12,7 +14,8 @@ class Worker extends SCWorker {
         var environment = this.options.environment;
 
     //  EXPRESS ROUTES.
-        var app = require(__dirname + "/server/routes.js")();
+        var app = require(__dirname + "/server/routes-app.js")();
+        var gallery = require(__dirname + "/server/gallery-app.js")();
 
     //  SC SERVER.
         var scServer = this.scServer;
