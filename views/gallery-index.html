@@ -1,0 +1,104 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+
+    <div id="navbar-holder" class="container">
+        <style>
+            .navbar-nav > li > a.menu-item,
+            .navbar-nav > li > div > a.menu-item {font-weight:normal;}
+            .navbar-nav > li > a.menu-item:hover,
+            .navbar-nav > li > div > a.menu-item:hover {color:aquamarine;}
+            .navbar-nav > li > div > a.menu-item { text-decoration:none }
+            #nav-btn-login { margin-left:10px; }
+            #nav-btn-login > a { color:#fff; font-weight:bold; font-size:14px; text-decoration:none; }
+            #nav-btn-snapshot > a { color:#38c0ee; }
+        </style>
+
+        <div class="navbar-brand">
+            <a href="https://anywhere3d.org" class="navbar-caption" title="anywhere3d.org">anywhere3d</a>
+        </div>
+        <a class="navbar-logo pull-left"><img src="https://i.imgur.com/09bC4Q0.png" alt="anywhere3d logo"></a>
+
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="navbar-collapse collapse" id="navbar-collapse" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav navbar-right pull-left">
+                
+                <li class="first menu-item"></li>
+
+                <li id="nav-item-index"><a href="/" class="menu-item"><div>Home</div></a></li>
+                <li id="nav-item-gallery" class="gallery-data"><a class="menu-item"><div>Gallery</div></a></li>
+                <li id="nav-item-snapshots" class="gallery-data"><a class="menu-item"><div>Snapshots</div></a></li>
+                <li id="nav-item-textures" class="gallery-data"><a class="menu-item"><div>Textures</div></a></li>
+                <li id="nav-item-forum"><a href="http://anywhere3d.freeforums.net" target="_blank" class="menu-item"><div>Forum</div></a></li>
+                <li id="nav-item-help"><a href="/help" target="_blank" class="menu-item"><div>Help</div></a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</nav>
+
+
+<section class="mbr-section mbr-after-navbar" id="pager-box-top">
+
+    <div class="container">
+
+        <h1><b>Gallery: </b><span id="collection"></span></h1>
+        <a class="btn btn-primary get-prev-btn pager-btn">&#8810; Prev page</a>
+        <div class="pgr-buttons-holder" style="display:inline;">
+            <a class="btn btn-default page-btn pager-btn"></a>
+            <a class="btn btn-default page-btn pager-btn"></a>
+            <a class="btn btn-default page-btn pager-btn"></a>
+            <a class="btn btn-default page-btn pager-btn"></a>
+            <a class="btn btn-default page-btn pager-btn"></a>
+            <a class="btn btn-default page-btn pager-btn"></a>
+            <a class="btn btn-default page-btn pager-btn"></a>
+            <a class="btn btn-default page-btn pager-btn"></a>
+            <a class="btn btn-default page-btn pager-btn"></a>
+            <a class="btn btn-default page-btn pager-btn"></a>
+        </div>
+        <a class="btn btn-primary get-next-btn pager-btn">Next page &#8811;</a>
+
+        <div class="pull-right small" style="text-align:right;">
+            page:<span id="page"></span>, displaying <span id="length"></span> items,<br>(from <span id="from"></span> to <span id="to"></span>) of total <span id="count"></span>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="mbr-section" id="body-section">
+<div id="snapshots-holder" class="container"></div>
+</section>
+
+<section class="mbr-section" id="pager-box-bottom">
+    <div class="btn btn-default load-more-btn pager-btn" id="get-more-snapshots">
+        <a>Load more...</a>
+    </div>
+</section>
+
+<script>
+
+    debugMode = true;
+    var jsFolder = "/js/";
+    var navbarFolder = "/navbar/";
+    var scriptsFolder = "/scripts/";
+    var componentsFolder = "/components/";
+
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/jquery-ui.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/bootbox.min.js"></script>
+<script src="/js/DeviceDetector.js"></script>
+<script src="/js/alerts.js"></script>
+<script src="/js/w3.js"></script>
+<script src="/js/gallery.js"></script>
+
