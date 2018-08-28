@@ -1,4 +1,4 @@
-//  server/routes-app.js
+//  routes-app.js
 
     var path = require("path");
     var morgan = require("morgan");
