@@ -18,8 +18,6 @@
     app.set("trust proxy", "loopback");
 
 //  BODY PARSER. 
-
-//  source: "https://stackoverflow.com/questions/19917401/error-request-entity-too-large".
     app.use(bodyParser.json({limit:"100mb"}));
     app.use(bodyParser.json({
         limit:"100mb",          //  default:"100kb".
