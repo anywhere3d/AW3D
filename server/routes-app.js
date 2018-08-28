@@ -9,11 +9,11 @@
     var serveStatic = require("serve-static");
     var expressHandlebars = require("express-handlebars");
 
-    //  PROSSESS ENV SETUP.
+//  PROSSESS ENV SETUP.
     var env = require("node-env-file"); 
     env( path.resolve(__dirname, "../.env") ); // IMPORTANT //
 
-    //  MONGODB.
+//  MONGODB.
     var MongoClient = require("mongodb").MongoClient;
     var dbUser = process.env.DB_URER;
     var dbPass = process.env.DB_PASS;
@@ -37,8 +37,7 @@
     app.locals.pretty = true;
     app.set("trust proxy", "loopback");
 
-//  ROUTES. Keeping the order is IMPORTANT.
-//  First must be the routes and then the static folders.
+//  ROUTES.
     require(__dirname + "/routes/gallery.js")(app);
     require(__dirname + "/routes/gallery_insert.js")(app);
     require(__dirname + "/routes/gallery_find.js")(app);
@@ -51,11 +50,9 @@
     require(__dirname + "/routes/outfits_insert.js")(app);
     require(__dirname + "/routes/uploader.js")(app);
 
-//  First must be the routes and last the static folders.
     app.use(serveStatic(path.resolve(__dirname, "../public")));
 
 //  Log every HTTP request. 
-//  See https://github.com/expressjs/morgan for other available formats.
     if (process.env.ENV === "dev") app.use(morgan("dev"));
 
 //  VIEW ENGINE.
