@@ -31,6 +31,7 @@ module.exports = function() {
     app.locals.pretty = true;
     app.set("trust proxy", "loopback");
 
+    require(__dirname + "/routes/gallery.js")(app);
     require(__dirname + "/routes/gallery_insert.js")(app);
     require(__dirname + "/routes/gallery_find.js")(app);
     require(__dirname + "/routes/snapshots_insert.js")(app);   
