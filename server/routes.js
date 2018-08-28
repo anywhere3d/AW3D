@@ -7,7 +7,7 @@ var serveStatic = require("serve-static");
 var expressHandlebars = require("express-handlebars");
 
 var env = require("node-env-file"); 
-env( path.resolve(__dirname, "../.env") ); // IMPORTANT //
+env( path.resolve(__dirname, "../.env") );
 
 var MongoClient = require("mongodb").MongoClient;
 var dbUser = process.env.DB_URER;
