@@ -48,7 +48,6 @@
     require(__dirname + "/routes/textures_update.js")(app);
     require(__dirname + "/routes/outfits_find.js")(app);
     require(__dirname + "/routes/outfits_insert.js")(app);
-    require(__dirname + "/routes/uploader.js")(app);
 
     app.use(serveStatic(path.resolve(__dirname, "../public")));
 
