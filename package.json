@@ -1,6 +1,6 @@
 {
-  "name": "anywhere3d-sc",
-  "description": "A sample SocketCluster app",
+  "name": "anywhere3d-scc-v1",
+  "description": "Anywhere3d SocketCluster app",
   "version": "0.4.0",
   "contributors": [
     {
@@ -10,9 +10,11 @@
   ],
   "dependencies": {
     "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.2",
     "connect": "3.0.1",
     "express": "4.16.3",
     "express-handlebars": "^3.0.0",
+    "formidable": "^1.2.1",
     "minimist": "1.1.0",
     "mongodb": "^2.2.29",
     "morgan": "1.7.0",
